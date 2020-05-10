@@ -3,25 +3,24 @@
 #include <algorithm>
 using namespace std;
 
-int gcd(int a, int b)
+long long gcd(int a, long long b)
 {
-    if(b == 0)
+    if (b == 0)
         return a;
 
-    return gcd(b, a%b);
+    return gcd(b, a % b);
 }
 
 int main()
 {
-    long ans = 1;
-    for(int i = 2; i <= 20; i++)
+    long long ans = 1;
+    for (int i = 1; i <= 20; i++)
     {
-        long lcm = (i * ans)/gcd(i, ans);
-        ans = lcm;
+        ans = (i * ans) / (gcd(i, ans));
     }
 
     cout << ans << endl;
     return 0;
 }
 
-//Answer is 18044195.
+//Answer is 232792560.

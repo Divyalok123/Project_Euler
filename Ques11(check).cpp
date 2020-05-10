@@ -3,9 +3,9 @@
 #include <algorithm>
 using namespace std;
 
-long triangular(int n)
+int triangular(int n)
 {
-    long ans = (n*(n+1))/2;
+    int ans = (n*(n+1))/2;
     return ans;
 }
 
@@ -42,7 +42,7 @@ int main()
             ans = triangular(n);
             break;
         }
-        n++;
+        n+=10;
     }
 
     cout << triangular(n) << endl;
